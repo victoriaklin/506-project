@@ -72,7 +72,7 @@ This histogram shows the distribution of delays for the 1BU bus. The x-axis repr
 
 ![image](https://github.com/user-attachments/assets/badca230-e53d-44b6-b83c-011a937c239f)
 
-It has multiple peaks spread across the x-axis, suggesting more erratic arrival pattern. The lack of a dominant peak around zero delay indicates lower reliability compared to 1BU. This suggests external factors may influence their punctuality more heavily.
+This histogram shows the distribution of delays for the Fenway bus. It has multiple peaks spread across the x-axis, suggesting more erratic arrival pattern. The lack of a dominant peak around zero delay indicates lower reliability compared to 1BU. This suggests external factors may influence their punctuality more heavily.
 
 ![image](https://github.com/user-attachments/assets/238d0f85-0c3b-4bbb-8b5e-c97f8df0398c)
 
