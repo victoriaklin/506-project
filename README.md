@@ -80,11 +80,11 @@ This scatter plot compares actual arrival times against scheduled times for each
 
 ![image](https://github.com/user-attachments/assets/398165d4-bb15-48f4-8458-4159598d2675)
 
-This box plot which provides a concise summary of delay distribution for 1BU. The central box represents the interquartile range (IQR), covering the middle 50% of delays, while the line within the box shows the median delay, which is close to zero. This plot confirms the earlier observation: 1BU has a tight distribution around zero, indicating consistent on-time performance. On the other hand, the Fenway bus has a larger IQR, indicating more variability in its arrival times. The median delay is around zero but with a wider spread, and both whiskers extend further, showing more variability. There are fewer extreme outliers, but the overall distribution is wider than 1BU, confirming that Fenway arrivals are more unpredictable.
+This bar chart shows the average delay for each bus type. The y-axis represents the average delay in minutes, while the x-axis shows each bus type. 1BU has a slightly negative average delay, meaning it tends to arrive slightly early on average. This slight negative delay may indicate efficient scheduling or less congestion along its route. Fenway has a slightly positive average delay, indicating that it tends to be late more often than early. This aligns with our previous observations of its erratic arrival patterns.
 
 ![image](https://github.com/user-attachments/assets/3e5563c1-77f5-48b5-8383-e90ffb4ebb14)
 
-
+This bar chart categorizes each bus’s performance by delay types (on-time, late, early), with the y-axis being the Percentage of arrivals, and the x-axis the Bus types, with color-coded bars representing each delay category. We saw that nearly 80% of 1BU arrivals are on time, which is a significant portion. This high on-time percentage reinforces that 1BU is highly reliable. On the other hand, Fenway has a more even distribution across categories, with approximately 40% on time, and the remaining split between early and late. This spread shows a lower on-time reliability, with more variability in its arrival performance. This breakdown allows us to quickly see which bus line is most consistent. It shows that 1BU is significantly more reliable in adhering to schedules, while Fenway has room for improvement.
 
 ---
 
