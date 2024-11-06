@@ -51,6 +51,17 @@ To interpret the data meaningfully, we will use various visualizations:
   - Each bus route will have a separate box plot for clarity, visualizing the median, interquartile range, and potential outliers in arrival times.
 
 These visualizations will provide insights into the accuracy and reliability of the Terrier Transit app, highlighting patterns in arrival delays and enabling us to quantify discrepancies between predicted and actual wait times.
+![image](https://github.com/user-attachments/assets/6a3dd499-ca30-4486-b67c-bf017709798c)
+![image](https://github.com/user-attachments/assets/32c67e4d-4e90-4994-83b4-42dc896ae53d)
+![image](https://github.com/user-attachments/assets/badca230-e53d-44b6-b83c-011a937c239f)
+![image](https://github.com/user-attachments/assets/27901b0b-9637-48e1-bd08-02e799b2a93d)
+![image](https://github.com/user-attachments/assets/29e420df-066f-4665-a518-11da5612ce65)
+![image](https://github.com/user-attachments/assets/238d0f85-0c3b-4bbb-8b5e-c97f8df0398c)
+![image](https://github.com/user-attachments/assets/54b583c0-8156-46cf-88bd-15a698807f01)
+![image](https://github.com/user-attachments/assets/398165d4-bb15-48f4-8458-4159598d2675)
+![image](https://github.com/user-attachments/assets/3e5563c1-77f5-48b5-8383-e90ffb4ebb14)
+
+
 
 ---
 
