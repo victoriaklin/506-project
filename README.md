@@ -70,17 +70,25 @@ These visualizations will provide insights into the accuracy and reliability of 
 
 This histogram shows the distribution of delays for the 1BU bus. The x-axis represents the delay time in minutes, and the y-axis shows the frequency of arrivals for each delay range. The peak near 0 indicates that 1BU buses are generally on time, with most arrivals clustered around zero delay. This means the 1BU bus has a reliable schedule with minimal deviations. A slight skew to the right shows that when delays do occur, they tend to be positive (late arrivals), but these are infrequent.
 
+---
+
 ![image](https://github.com/user-attachments/assets/badca230-e53d-44b6-b83c-011a937c239f)
 
 This histogram shows the distribution of delays for the Fenway bus. It has multiple peaks spread across the x-axis, suggesting more erratic arrival pattern. The lack of a dominant peak around zero delay indicates lower reliability compared to 1BU. This suggests external factors may influence their punctuality more heavily.
+
+---
 
 ![image](https://github.com/user-attachments/assets/238d0f85-0c3b-4bbb-8b5e-c97f8df0398c)
 
 This scatter plot compares actual arrival times against scheduled times for each bus type. The x-axis represents the scheduled arrival time in minutes since midnight, while the y-axis represents the actual arrival time. The green dashed line represents an ideal on-time arrival where actual time equals scheduled time. 1BU buses mostly cluster close to the green line, showing consistent on-time arrivals across different times of day. Fenway buses, however, are more spread out around the line, indicating higher variability and deviation from the schedule. This scatter plot visually reinforces that 1BU tends to be more reliable, while Fenway has a wider range of delays.
 
+---
+
 ![image](https://github.com/user-attachments/assets/398165d4-bb15-48f4-8458-4159598d2675)
 
 This bar chart shows the average delay for each bus type. The y-axis represents the average delay in minutes, while the x-axis shows each bus type. 1BU has a slightly negative average delay, meaning it tends to arrive slightly early on average. This slight negative delay may indicate efficient scheduling or less congestion along its route. Fenway has a slightly positive average delay, indicating that it tends to be late more often than early. This aligns with our previous observations of its erratic arrival patterns.
+
+---
 
 ![image](https://github.com/user-attachments/assets/3e5563c1-77f5-48b5-8383-e90ffb4ebb14)
 
