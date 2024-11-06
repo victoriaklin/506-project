@@ -27,6 +27,21 @@ This project aims to evaluate the accuracy of the Terrier Transit app in predict
   - **TransLoc API**: Provides real-time bus location data, including capacity metrics, which will help in analyzing trends during peak hours.
   - **Terrier Transit App**: Used to gather data on predicted wait times and official bus schedules, facilitating a direct comparison with live metrics from TransLoc.
 
+## Data Processing
+- **Filtering by Route ID**:
+  - Extracted data for each bus line by filtering based on specific route_id values so we can isolate each bus line's data for analysis.
+- **Timestamp Conversion**:
+  - Each bus arrival record included a timestamp, which we converted to a datetime format using pd.to_datetime so we can make comparisons and calculations
+- **Delay Calculation**:
+  - Calculated delays by subtracting the scheduled arrival time from the actual arrival time for each record, creating the delay column representing the delay in minutes.
+- **Categorizing Delays**:
+  - Categorized each delay into three groups: On-Time (±5 min), Early (>5 min), and Late (>5 min).
+  - This was done by applying conditional logic to the delay column in the code, creating a new delay_category column.
+- **Grouping Data by Bus Type**:
+  - Grouped data by the bus_type and time of day in preparation for comparative analysis of bus line. 
+- **Combining All Data**:
+  - Concatenated data for all bus lines into a single DataFrame, combined_merged_df enabling us to visualize and compare each bus line’s delay distribution and performance
+
 ---
 
 ## Data Modeling
@@ -52,8 +67,15 @@ To interpret the data meaningfully, we will use various visualizations:
 
 These visualizations will provide insights into the accuracy and reliability of the Terrier Transit app, highlighting patterns in arrival delays and enabling us to quantify discrepancies between predicted and actual wait times.
 ![image](https://github.com/user-attachments/assets/6a3dd499-ca30-4486-b67c-bf017709798c)
+
+This histogram shows the distribution of delays for the 1BU bus. The x-axis represents the delay time in minutes, and the y-axis shows the frequency of arrivals for each delay range. The peak near 0 indicates that 1BU buses are generally on time, with most arrivals clustered around zero delay. This means the 1BU bus has a reliable schedule with minimal deviations. A slight skew to the right shows that when delays do occur, they tend to be positive (late arrivals), but these are infrequent.
+
 ![image](https://github.com/user-attachments/assets/badca230-e53d-44b6-b83c-011a937c239f)
+
+It has multiple peaks spread across the x-axis, suggesting more erratic arrival pattern. The lack of a dominant peak around zero delay indicates lower reliability compared to 1BU. This suggests external factors may influence their punctuality more heavily.
+
 ![image](https://github.com/user-attachments/assets/238d0f85-0c3b-4bbb-8b5e-c97f8df0398c)
+
 ![image](https://github.com/user-attachments/assets/398165d4-bb15-48f4-8458-4159598d2675)
 ![image](https://github.com/user-attachments/assets/3e5563c1-77f5-48b5-8383-e90ffb4ebb14)
 
