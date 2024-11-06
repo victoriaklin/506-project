@@ -54,7 +54,6 @@ These visualizations will provide insights into the accuracy and reliability of 
 ![image](https://github.com/user-attachments/assets/6a3dd499-ca30-4486-b67c-bf017709798c)
 ![image](https://github.com/user-attachments/assets/badca230-e53d-44b6-b83c-011a937c239f)
 ![image](https://github.com/user-attachments/assets/238d0f85-0c3b-4bbb-8b5e-c97f8df0398c)
-![image](https://github.com/user-attachments/assets/54b583c0-8156-46cf-88bd-15a698807f01)
 ![image](https://github.com/user-attachments/assets/398165d4-bb15-48f4-8458-4159598d2675)
 ![image](https://github.com/user-attachments/assets/3e5563c1-77f5-48b5-8383-e90ffb4ebb14)
 
