@@ -3,8 +3,6 @@
 ## Project Description
 This project aims to evaluate the accuracy of the Terrier Transit app in predicting wait times and how reliably buses adhere to their schedules. We will compare Terrier Transit’s predictive data with live data from the **TransLoc API**, which provides real-time bus locations and capacity information. The project will focus on popular bus routes servicing campus and nearby areas to determine how effectively the app serves the needs of the campus community.
 
-## Youtube Link
-https://youtu.be/ahE8fKplLHo
 ---
 
 ## Goals
@@ -78,7 +76,12 @@ It has multiple peaks spread across the x-axis, suggesting more erratic arrival 
 
 ![image](https://github.com/user-attachments/assets/238d0f85-0c3b-4bbb-8b5e-c97f8df0398c)
 
+This scatter plot compares actual arrival times against scheduled times for each bus type. The x-axis represents the scheduled arrival time in minutes since midnight, while the y-axis represents the actual arrival time. The green dashed line represents an ideal on-time arrival where actual time equals scheduled time. 1BU buses mostly cluster close to the green line, showing consistent on-time arrivals across different times of day. Fenway buses, however, are more spread out around the line, indicating higher variability and deviation from the schedule. This scatter plot visually reinforces that 1BU tends to be more reliable, while Fenway has a wider range of delays.
+
 ![image](https://github.com/user-attachments/assets/398165d4-bb15-48f4-8458-4159598d2675)
+
+This box plot which provides a concise summary of delay distribution for 1BU. The central box represents the interquartile range (IQR), covering the middle 50% of delays, while the line within the box shows the median delay, which is close to zero. This plot confirms the earlier observation: 1BU has a tight distribution around zero, indicating consistent on-time performance. On the other hand, the Fenway bus has a larger IQR, indicating more variability in its arrival times. The median delay is around zero but with a wider spread, and both whiskers extend further, showing more variability. There are fewer extreme outliers, but the overall distribution is wider than 1BU, confirming that Fenway arrivals are more unpredictable.
+
 ![image](https://github.com/user-attachments/assets/3e5563c1-77f5-48b5-8383-e90ffb4ebb14)
 
 
