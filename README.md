@@ -1,56 +1,61 @@
-# 506-project
+# 506 Project Proposal
 
 ## Project Description
-We aim to measure the accuracy of the Terrier Transit app in predicting wait times and how well the buses follow their schedules. This project will compare Terrier Transit data with live data from the **TransLoc API**, which provides real-time bus locations.
+This project aims to evaluate the accuracy of the Terrier Transit app in predicting wait times and how reliably buses adhere to their schedules. We will compare Terrier Transit’s predictive data with live data from the **TransLoc API**, which provides real-time bus locations and capacity information. The project will focus on popular bus routes servicing campus and nearby areas to determine how effectively the app serves the needs of the campus community.
 
 ---
 
 ## Goals
-- Quantify the accuracy of the Terrier Transit app for:
-  - Any given day (Monday through Friday)
-  - Any given stop from 8 AM to 6 PM (most active times on campus)
+- Quantitatively assess the Terrier Transit app’s accuracy for:
+  - Weekday predictions (Monday through Friday).
+  - Common stops from 8 AM to 6 PM, the busiest times on campus.
+- Establish metrics to determine how often buses arrive within an acceptable timeframe and identify discrepancies between predicted and actual wait times.
 
 ---
 
 ## Data Collection
 - **Bus Routes Tracked**:
-  - Charles River - Medical Campus
-  - Fenway
-  - Comm Ave
-- **Collection times**:
-  - Our data will be collected during regular school hours, when class is in session, so there should be no anomalies in the data since major events will happen outside of our selected time frame.
-  - e.g. Fenway games are suspended for the rest of the season and concerts happen later at night
- 
+  - Charles River - Medical Campus (Comm Ave - BU Medical)
+  - Fenway route
+  - Comm Ave route
+  - We have yet to properly parse the unique ID for the Comm Ave Bus as it requires attentive live tracking of specific route coordinates (the Comm Ave loop does not have unique stops as its route is a subset of all bus routes).
+- **Collection Times**:
+  - Data will be gathered during regular school hours on weekdays, avoiding anomalies caused by events like Fenway games or concerts that occur outside our monitoring window. This schedule ensures that our data reflects standard campus traffic conditions.
 - **Margin of Error**:
-  - Acceptable margin of error for wait time is around 5 minutes
-  - Considering the minimum time between classes being 15 minutes, this margin of error allows the bus to be late but arrive to the next stop within that timeframe
-
+  - An acceptable margin of error for wait time predictions is set to around 5 minutes. This benchmark allows for minor delays while still providing students enough time to get to the next stop within the 15-minute class transition period.
 - **Data Sources**:
-  - **TransLoc API**: Bus locations and bus capacity
-  - **Terrier Transit App**: Wait times and bus schedules
-  
- 
+  - **TransLoc API**: Provides real-time bus location data, including capacity metrics, which will help in analyzing trends during peak hours.
+  - **Terrier Transit App**: Used to gather data on predicted wait times and official bus schedules, facilitating a direct comparison with live metrics from TransLoc.
+
 ---
 
 ## Data Modeling
-We will design a database schema that includes:
-- Bus Routes
-- Bus Stops
-- Scheduled Trips
-- Actual Trips
-- Wait Times
-- Bus Locations
+We will design a database schema to handle and store the relevant information for in-depth analysis. Key entities in the database will include:
+- **Bus Routes**: The specific campus bus routes being analyzed.
+- **Bus Stops**: Locations where wait times and arrival adherence will be assessed.
+- **Scheduled Trips**: Planned trip data as per the Terrier Transit app, allowing us to compare expected vs. actual performance.
+- **Actual Trips**: Real-time trip data recorded from the TransLoc API.
+- **Wait Times**: Predicted vs. observed wait times at each stop to gauge predictive accuracy.
+- **Bus Locations**: Real-time bus positions to analyze adherence to planned routes and timing.
 
 ---
 
 ## Data Visualization
-We will use a scatter plot to compare predicted vs. actual wait times at each stop:
-- **X-axis**: Predicted time
-- **Y-axis**: Actual time
-- **Color-coded points**: Represent individual stops
+To interpret the data meaningfully, we will use various visualizations:
+- **Scatter Plot**: To compare predicted vs. actual wait times at each stop.
+  - **X-axis**: Predicted wait time by the Terrier Transit app.
+  - **Y-axis**: Actual observed wait time based on TransLoc data.
+  - **Color-coded points**: Each point represents a different bus stop, allowing us to identify trends or outliers at specific locations.
+
+- **Box Plot (Whisker Plot)**: To show the distribution of arrival delays for each bus route, helping us understand consistency in delays.
+  - Each bus route will have a separate box plot for clarity, visualizing the median, interquartile range, and potential outliers in arrival times.
+
+These visualizations will provide insights into the accuracy and reliability of the Terrier Transit app, highlighting patterns in arrival delays and enabling us to quantify discrepancies between predicted and actual wait times.
 
 ---
 
 ## Test Plan
-- **Training Data**: Gathered over 3 weeks in October
-- **Testing Data**: Collected during 3 weeks in November
+- **Training Data**: Data collected over a 3-week period in October to establish baseline measurements of transit behavior and app accuracy.
+- **Testing Data**: Additional data collected over 3 weeks in November, used to validate the accuracy of Terrier Transit predictions and identify any performance shifts over time.
+
+This approach ensures a robust dataset for testing and evaluating predictive models for wait time and schedule adherence, ultimately helping to improve Terrier Transit’s reliability for users on campus. The preliminary code is available in the project repository for review and iteration as needed.
