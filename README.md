@@ -93,8 +93,6 @@ To interpret the data meaningfully, we will use various visualizations:
 
 These visualizations will provide insights into the accuracy and reliability of the Terrier Transit app, highlighting patterns in arrival delays and enabling us to quantify discrepancies between predicted and actual wait times.
 
-—
-
 ## Data Interpretation and Claims
 
 ## Histograms
