@@ -63,6 +63,13 @@ We will design a database schema to handle and store the relevant information fo
 
 ---
 
+## Flask App
+On our Flask app are the result of our visualizations of the collected data (each bus and route)
+- Displays the static geolocations of each stop, and produces a static map of each route
+- Overtop, displays the actual API movement data of the bus on the route, indicating if it is off its path as well as any deviation from the schedule 
+
+---
+
 ## Data Cleaning
 
 Data to model the bus routes was cleaned by ensuring that the animations produced were only depicting the tracked buses with the highest location accuracy. As location drifting was an issue we experienced. We created an exception point of the Hyatt stop to filter out all night buses (keeping it between 8am-6pm). We also returned the graphs with the lowest overall distance to each stop to ensure accuracy. 
@@ -127,7 +134,6 @@ The route-level comparison of average delays reveals a clear hierarchy in reliab
 Comm Ave: Averaging about 30 seconds behind schedule, Comm Ave demonstrates good reliability. While not quite as precise as 1BU, its delays are minor.
 Fenway: Fenway stands out with an average delay nearing 3 minutes. This significant lag indicates systemic issues with timeliness on this route.
 The Terrier Transit app appears to predict 1BU and Comm Ave arrivals well, but struggles with Fenway's longer delays.
-
 ---
 
 ## Conclusion 
