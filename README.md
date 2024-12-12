@@ -1,6 +1,12 @@
 ## Project Description
 This project aims to evaluate the accuracy of the Terrier Transit app in predicting wait times and how reliably buses adhere to their schedules. We will compare Terrier Transit’s predictive data with live data from the **TransLoc API**, which provides real-time bus locations and capacity information. The project will focus on popular bus routes servicing campus and nearby areas to determine how effectively the app serves the needs of the campus community.
 
+## How to Build
+- Start by git cloning this repository
+- In the terminal of the cloned repo, run "make install" and "make run"
+- Once completed, the console will display the localhost link to the Flask app
+- Enter the localhost, and the Flask app will be displayed
+
 ## Goals
 - Quantitatively assess the Terrier Transit app’s accuracy for:
   - Weekday predictions (Monday through Friday).
