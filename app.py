@@ -119,9 +119,9 @@ template = """
     </p>
     <p>
       Each animation provides a visual understanding of how the bus travels through its route, 
-      including which stops it visits and how long it spends at each location. By selecting a route 
-      from the dropdown menu below, you can explore these animations to gain insights into route timing, 
-      bus performance, and potential bottlenecks.
+      including which stops it visits. By selecting a route from the dropdown menu below, you can 
+      explore these animations to gain insights into route timing and  
+      bus performance.
     </p>
   </div>
 
