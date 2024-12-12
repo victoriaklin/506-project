@@ -1,9 +1,14 @@
 import os
-from flask import Flask, render_template_string, request, url_for
+from flask import Flask, render_template_string, request
 
 app = Flask(__name__)
 
+# Directory for GIFs
 GIF_DIR = "static/gifs"
+
+# Ensure the GIF directory exists
+if not os.path.exists(GIF_DIR):
+    os.makedirs(GIF_DIR)
 
 def load_route_gifs():
     """
@@ -29,8 +34,10 @@ def load_route_gifs():
                     break
     return route_gifs
 
+# Load GIFs based on directory and naming convention
 ROUTE_GIFS = load_route_gifs()
 
+# HTML Template
 template = """
 <!DOCTYPE html>
 <html lang="en">
@@ -127,7 +134,6 @@ template = """
     <input type="submit" value="View GIFs">
     </form>
 
-
   {% if gifs_for_route %}
     <h2>Showing Animations for {{ selected_route }}</h2>
     {% for gif in gifs_for_route %}
@@ -158,4 +164,4 @@ def index():
     )
 
 if __name__ == "__main__":
-    app.run(debug=True, host='0.0.0.0', port=5000)
+    app.run(debug=True, host='0.0.0.0', port=3000)

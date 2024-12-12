@@ -1,10 +1,14 @@
 .PHONY: install test run
 
 install:
-	pip install -r requirements.txt
+	python3 -m venv venv
+	. venv/bin/activate && pip install -r requirements.txt
+
 
 test:
 	pytest --maxfail=1 --disable-warnings -q
 
+
+
 run:
-	python app.py
+	. venv/bin/activate && python app.py
