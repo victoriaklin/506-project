@@ -5,8 +5,9 @@ install:
 	. venv/bin/activate && pip install -r requirements.txt
 
 
+
 test:
-	pytest --maxfail=1 --disable-warnings -q
+	. venv/bin/activate && pytest --maxfail=1 --disable-warnings -q
 
 
 
